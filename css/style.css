@@ -1,0 +1,345 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*****共通部分
+***********************************************/
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+  background: url(../images/106.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  background-size: cover;
+  background-color: #ffffff;
+}
+
+#sample {
+  letter-spacing: 1em;
+  color: #000;
+}
+.wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+
+/*****ヘッダー*****/
+.header_top h1 {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px #000;
+}
+.header_top h1 span {
+  color: #fff;
+  font-size: 16px;
+}
+
+/*****メインビジュアル*****/
+.main_visual img {
+
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#aaa {
+  width : 100%;
+}
+#slideshow {
+  position: relative;
+  height: 480px;
+}
+#slideshow IMG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: 0;
+}
+#slideshow IMG.active {
+  z-index: 10;
+  opacity: 1;
+}
+#slideshow IMG.last-active {
+  z-index: 9;
+}
+
+
+/*****ナビゲーション*****/
+.main_navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(127, 255, 212, 0.5);
+  margin-top: 30px;
+}
+.main_navigation li {
+  width: 25%;
+  text-align: center;
+}
+.main_navigation a {
+  padding: 15px 0;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.main_navigation a:hover {
+  background-color: rgba(30, 144, 255, 0.8);
+  color: #afeeee;
+  transition: all 0.5s;
+  width: 100%;
+  padding-left: 10px;
+}
+
+/*****フッター*****/
+.footer_top {
+  display: table;
+  margin-top: 15px;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(127, 255, 212, 0.5);
+}
+.footer_top .copyright {
+  display: table-cell;
+  vertical-align: middle;
+  color: #00008b;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.2em;/*1mは14px*/
+}
+.footer_top .copyright img {
+  width: 150px;
+  height: auto;
+}
+.footer_top2 {
+  display: table;
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(127, 255, 212, 0.5);
+}
+.footer_top2 .copyright {
+  display: table-cell;
+  vertical-align: middle;
+  color: #00008b;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.2em;/*1mは14px*/
+}
+.footer_top2 .copyright img {
+  width: 150px;
+  height: auto;
+}
+
+/*****メインコンテンツ・トップページ
+***********************************************/
+
+.article_top {
+  margin: 30px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.section_top {
+  align-self: flex-start;
+  width: 48.5%;
+  padding: 2.5%;
+  margin-bottom: 30px;
+  background-color: rgba(127, 255, 212, 0.5);
+}
+.section_top h1 {
+  font-size: 24px;
+  color: #00008b;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #bababa;
+  margin-bottom: 20px;
+}
+.section_top p {
+  color: #00008b;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.section_top .btn {
+  color: #00008b;
+  background-color: #3998a7;
+  padding: 10px 30px;
+  border-radius: 5px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
+.section_top .btn:hover {
+  background-color: #000000;
+  transition: all 0.5s;
+  color: #ffffff;
+}
+
+.section_top img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.section_top iframe {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.top-media {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto 80px;
+    @include mq-mb {
+        display: block;
+        margin: 50px auto 60px;
+    }
+
+    .news {
+        width: 100%;
+        padding: 40px 40px 0 50px;
+        @include mq-pc {
+            max-width: 590px;
+        }
+        @include mq-mb {
+            padding: 0 20px 60px;
+        }
+        .list {
+            height: 330px;
+            margin-bottom: 30px;
+            padding: 0;
+            overflow: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+
+#twitter-timeline {
+
+}
+.twitter {
+
+    width: 100%;
+
+    @include mq-pc {
+        max-width: 470px;
+    }
+
+    &__inner {
+        padding: 40px 20px 30px;
+
+        border-radius: 30px;
+
+    }
+}
+}
+
+.topp {
+  margin: auto;
+}
+.twitter-timeline {
+ background-color: #ffffff;
+
+ margin-right: 200px;
+
+
+}
+
+.topp .btn {
+  border-radius: 50px;
+  background: rgba(64,224,208,0.8);
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  padding: 13px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  width: 100%;
+  height: 100%;
+  &:after {
+      content: '';
+
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}
+.topp .btn:hover {
+
+  background-color: #000000;
+  border-radius: 50px;
+  color: #3998a7;
+  transition: all 1.0s;
+  width: 100%;
+  font-weight: bold;
+}
+
+
+
+
+/*****メインコンテンツ・ディスコグラフィー
+***********************************************/
+
+.aaa {
+  color: #000000;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 0.5em;
+  margin: 30px 0 10px 0;
+}
+.hr1 {
+  border-top: 5px solid #4169e1;
+}
+.hr2 {
+  border-top: 2px solid #008080;
+}
+.main {
+  background-color: rgba(127, 255, 212, 0.5);
+  padding-bottom: 20px;
+}
+.items-reverse {
+  width: 960px;
+  margin: auto;
+}
+.items-reverse .item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.items-reverse .item-img {
+  width: 48%;
+}
+.items-reverse .item-img img {
+  width: 100%;
+}
+.items-reverse .item-body {
+  width: 48%;
+}
+.items-reverse .item:nth-child(odd) {
+  /* 奇数odd・偶数even */
+  flex-direction: row-reverse;
+}
+.op {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.btn-link f-en btn-view mt-30 {
+  font-weight: bold;
+  line-height: 1.75;
+}
