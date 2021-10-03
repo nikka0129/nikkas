@@ -184,6 +184,22 @@ body {
   color: #ffffff;
 }
 
+.items-reverse .btn2 {
+  margin-top: 10px;
+  color: #00008b;
+  background-color: #3998a7;
+  padding: 10px 30px;
+  border-radius: 5px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  text-align: center;
+}
+.items-reverse .btn2:hover {
+  background-color: #000000;
+  transition: all 0.5s;
+  color: #ffffff;
+}
+
 .section_top img {
   width: 100%;
   margin-bottom: 10px;
