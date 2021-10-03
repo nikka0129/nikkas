@@ -183,10 +183,13 @@ body {
   transition: all 0.5s;
   color: #ffffff;
 }
-
+#btn2 {
+  font-weight: bold;
+}
 .items-reverse .btn2 {
   margin-top: 10px;
-  color: #00008b;
+  font-weight: bold;
+  color: #000000;
   background-color: #3998a7;
   padding: 10px 30px;
   border-radius: 5px;
@@ -216,7 +219,6 @@ body {
     @include mq-mb {
         display: block;
         margin: 50px auto 60px;
-      
     }
 
     .news {
